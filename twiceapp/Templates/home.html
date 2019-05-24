@@ -1,0 +1,28 @@
+<html>
+    {%load static%}
+        <head>
+                <link rel="stylesheet" href={%static 'mystyle.css' %}>
+        </head>
+    <body>
+        <h1 id='mm'>일본인 멤버는 다음과 같아욥 </h1>
+        {% for a in japanese%}
+        <h3>{{a.name}}</h3>
+        {{a.age}}
+        {{a.birth}}
+        {{a.nationality}}
+        {{a.position}}
+        <br>
+        <br>
+        {%endfor%}
+        <h1>모든 멤버는 다음과 같아연</h1>
+        {% for a in members %}
+        <h3>{{a.name}}</h3>
+        {{a.age}}
+        {{a.birth}}
+        {{a.nationality}}
+        {{a.position}}
+        <br>
+        <br>
+        {%endfor%}
+    </body>
+</html>
